@@ -7,9 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './remover-nulos-undefined.component.css'
 })
 export class RemoverNulosUndefinedComponent {
-  palavras = [null, 'Luana', undefined, 1234, 'Gabrieli', undefined];
+  palavras = [null, 0, 'Luana', undefined, 1234, 'Gabrieli', undefined, ''];
 
-  palavrasFiltradas = this.palavras.filter(palavra =>
-    palavra !== null && palavra !== undefined
-  );
+  // filter retorna só os valores considerados truthy
+  // colocando a condição palavra, ele já retorna somente os valores verdadeiros
+  // valores que são falsy: null, undefined, false, 0, NaN, ''
+  palavrasFiltradas = this.palavras.filter(palavra => palavra);
 }
