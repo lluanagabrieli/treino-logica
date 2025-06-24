@@ -22,8 +22,6 @@ export class SubstituirValoresComponent implements OnInit {
     let novasFrutas = this.frutas.map(fruta =>
       fruta === 'Banana' ? 'Maçã' : fruta
     );
-
-    // 17:55
     console.log(novasFrutas);
     console.log(this.frutas);
   }
